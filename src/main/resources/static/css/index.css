@@ -1,0 +1,18 @@
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: center;
+}
+body>div>div{
+    margin: 20px auto;
+}
+.btn{
+    width: 220px;
+    padding: 6px 0;
+    text-align: center;
+    background-color: rgb(30,187,255);
+    border-radius: 10px;
+    color: white;
+    cursor: pointer;
+}
