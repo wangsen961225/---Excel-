@@ -3,11 +3,10 @@ server:
 
 spring:
   datasource:
-    name: xiaofang2
-    driver-class-name: com.mysql.jdbc.Driver
     url: jdbc:mysql://47.99.148.49:3306/xiaofang2?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: root
+    driver-class-name: com.mysql.jdbc.Driver
     ###################以下为druid增加的配置###########################
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
