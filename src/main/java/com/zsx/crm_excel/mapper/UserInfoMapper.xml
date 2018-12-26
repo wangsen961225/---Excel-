@@ -10,4 +10,8 @@
     <select id="getUserInfoByTime" resultType="com.zsx.crm_excel.pojo.UserInfo">
         select * from xycms_user_info where FROM_UNIXTIME(time,'%Y-%m-%d') between #{beginDate} and #{endDate}
     </select>
+
+    <select id="getUserInfoCountByTime" resultType="java.lang.Integer">
+        select count(*) from xycms_user_info where FROM_UNIXTIME(time,'%Y-%m-%d') between #{beginDate} and #{endDate}
+    </select>
 </mapper>

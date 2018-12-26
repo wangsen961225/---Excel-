@@ -10,7 +10,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @EnableAutoConfiguration
@@ -27,10 +30,22 @@ public class XycmsUserInfoController {
         return userInfoList;
     }
 
-    @RequestMapping(value = "/userInfoByTime",method = RequestMethod.GET)
+    @RequestMapping(value = "/userInfoByTime")
     @ResponseBody
     public List<UserInfo> getUserInfoByTime(String beginDate,String endDate){
         List<UserInfo> userInfoList = userInfoService.getUserInfoByTime(beginDate, endDate);
         return userInfoList;
+    }
+
+    @RequestMapping(value = "/userInfoCountByTime")
+    @ResponseBody
+    public Map getUserInfoCountByTime(String beginDate, String endDate){
+        Integer count = userInfoService.getUserInfoCountByTime(beginDate, endDate);
+        Map<String,Object> map = new HashMap<String,Object>();
+        System.out.println(beginDate+"---"+endDate);
+        map.put("beginDate",beginDate);
+        map.put("endDate",endDate);
+        map.put("count",count);
+        return map;
     }
 }

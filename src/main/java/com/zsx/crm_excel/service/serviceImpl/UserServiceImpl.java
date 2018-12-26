@@ -24,4 +24,9 @@ public class UserServiceImpl implements UserInfoService {
         System.out.println(beginDate + endDate );
         return userInfoMapper.getUserInfoByTime(beginDate,endDate);
     }
+
+    @Override
+    public Integer getUserInfoCountByTime(String beginDate, String endDate) {
+        return userInfoMapper.getUserInfoCountByTime(beginDate, endDate);
+    }
 }

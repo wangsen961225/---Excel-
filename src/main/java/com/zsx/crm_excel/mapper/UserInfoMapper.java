@@ -14,4 +14,7 @@ public interface UserInfoMapper {
 
     //根据日期获取用户信息
     List<UserInfo> getUserInfoByTime(@Param("beginDate") String beginDate, @Param("endDate") String endDate);
+
+    //根据日期获取用户信息
+    Integer getUserInfoCountByTime(@Param("beginDate") String beginDate, @Param("endDate") String endDate);
 }

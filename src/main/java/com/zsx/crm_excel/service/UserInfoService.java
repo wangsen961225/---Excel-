@@ -11,4 +11,7 @@ public interface UserInfoService {
 
     //按照日期获取用户信息
     List<UserInfo> getUserInfoByTime(String beginDate,String endDate);
+
+    //按照日期获取用户信息条数
+    Integer getUserInfoCountByTime(String beginDate,String endDate);
 }
