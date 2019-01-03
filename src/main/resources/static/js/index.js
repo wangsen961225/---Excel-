@@ -5,7 +5,7 @@ beginDate = yestdayDate;
 endDate = yestdayDate;
 $.ajax({
     type: "POST", //提交方式
-    url: "http://localhost:8080/userInfoCountByTime",//注意！这里路径一定要对
+    url: "http://192.168.1.111:8080/userInfoCountByTime",//注意！这里路径一定要对
     data: {
         "beginDate" : beginDate,
         "endDate" : endDate
@@ -16,7 +16,7 @@ $.ajax({
 })
 $.ajax({
     type: "POST", //提交方式
-    url: "http://localhost:8080/userInfoByTime",//注意！这里路径一定要对
+    url: "http://192.168.1.111:8080/userInfoByTime",//注意！这里路径一定要对
     data: {
         "beginDate" : beginDate,
         "endDate" : endDate
@@ -78,7 +78,7 @@ function query() {
     }
     $.ajax({
         type: "POST", //提交方式
-        url: "http://localhost:8080/userInfoCountByTime",//注意！这里路径一定要对
+        url: "http://192.168.1.111:8080/userInfoCountByTime",//注意！这里路径一定要对
         data: {
             "beginDate" : beginDate,
             "endDate" : endDate
@@ -89,7 +89,7 @@ function query() {
     })
     $.ajax({
         type: "POST", //提交方式
-        url: "http://localhost:8080/userInfoByTime",//注意！这里路径一定要对
+        url: "http://192.168.1.111:8080/userInfoByTime",//注意！这里路径一定要对
         data: {
             "beginDate" : beginDate,
             "endDate" : endDate
